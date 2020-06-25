@@ -121,7 +121,89 @@ In this exercise, you will use Azure ARM templates to deploy the following envir
 
 2. Select **+Create a resource**.
 
-    ![Create a resource is selected from the Azure Portal Home.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image26.png "Azure Portal New blade")
+    ![Create a resource is selected from the Azure Portal Home.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image26.png "Azure Portal New page")
+
+3. Search for **Template** and select **Template Deployment (deploy using custom templates)**.
+
+    ![Template is typed in the New search field.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image27.png "Azure Portal New page")
+
+4. Select **Create**.
+
+    ![Template deployment is selected in the search results.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image28.png "Resource search results")
+
+5. On the **Custom deployment** page, select **Build your own template in the editor**.
+
+    ![In the Custom deployment page, the link to build your own template in the editor is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image29.png "Custom deployment page")
+
+6. On the **Edit template** page, select **Load file**.
+
+    ![In the Edit template page menu, Load file is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image30.png "Edit template page")
+
+7. From the `C:\HOL\Deployments` directory, locate the **BCDRIaaSPrimarySite.json** file and select **Open**.
+
+8. This will load the template into the Azure portal. Select **Save**.
+
+    ![Screenshot of the Save button.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image31.png "Save button")
+
+9. On the **Custom deployment** page, select your **BCDRIaaSPrimarySite** resource group. Notice how the template picked the deployment region based on the location of your **BCDRIaaSPrimarySite** resource group. Make sure this is *your* **Primary** region.
+
+    ![In the Custom deployment page, fields are populated based on the BCDRIaaSPrimarySite resource group. A call out highlights the Location field that is set to the Primary region value.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image32.png "Custom deployment page")
+
+10. Next, update the **Domain Controller DNS Name** in the **Settings** area. This will be the DNS name for the Active Directory Domain controller that will be your jump box into the IaaS environment. The name will need to be lowercase and 3-24 characters consisting of letters & numbers and be unique to all of Azure. In the example, the DNS name `bcdrdc8675309` was used.
+
+    ![In the Settings section, the Domain Controller DNS Name field is populated.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image33.png "Settings section")
+
+11. Finally, check **I agree to the terms and conditions stated above**. Select **Purchase** to start the deployment.
+
+    ![The check boxes for pin to dashboard and I agree to the terms and conditions are checked. The Purchase button is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image34.png "Purchase button")
+
+> **Note:** This deployment will take at least 60 minutes, but you can continue to the next task.
+
+### Task 2: Deploy on-premises environment
+
+1. From the **LABVM**, open Internet Explorer and connect to the Azure portal at: <https://portal.azure.com>.
+
+2. Select **+Create a resource** and then search for **Template Deployment**.
+
+    ![Create a resource is selected from the Azure Portal Home.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image26.png "Azure Portal New page")
+
+3. Select **Template deployment** and then **Create**.
+
+    ![Template deployment is selected in the search results.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image28.png "Resource search results")
+
+4. On the **Template deployment** page, select **Build your own template in the editor**.
+
+    ![The Build your own template in the editor link is selected in the Template deployment page.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image29.png "Template deployment page")
+
+5. On the **Edit template** page, select **Load file**.
+
+    ![In the Edit template page top menu, Load file is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image30.png "Edit template page")
+
+6. From the `C:\HOL\Deployments` directory locate the **BCDROnPremPrimarySite.json** file and select **Open**.
+
+7. This will load the template into the Azure portal. Select **Save**.
+
+8. On the **Custom deployment** page, next to **Resource group** select your **BCDROnPremPrimarySite** resource group. Notice how the template picked the deployment region based on the location of your **BCDROnPremPrimarySite** resource group. Make sure this is *your* **Primary** region.
+
+    ![In the Custom deployment page, Basics section, fields are set to values based on your primary region.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image35.png "Custom deployment page, Basics section")
+
+9. Next, update the **Hyper-V Host DNS Name** in the **Settings** area. This will be the DNS name for the Hyper-V Host that you will use for this simulated on-premises environment. The name will need to be lowercase and 3-24 characters consisting of letters & numbers and be unique to all of Azure. In the example, the name `hypervhost8675309` was used.
+
+    ![In the Settings section, the Domain Controller DNS Name field is populated.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image36.png "Settings section")
+
+10. Finally, check **I agree to the terms and conditions stated above**. Select **Purchase** to start the deployment.
+
+    ![The check boxes for pin to dashboard and I agree to the terms and conditions are checked. The Purchase button is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image34.png "Purchase button")
+
+> **Note:** This deployment will take at least 20 minutes, but you can continue to the next task.
+
+### Task 3: Deploy Azure PaaS environment
+
+1. From the **LABVM**, open Internet Explorer and connect to the Azure portal at <https://portal.azure.com>.
+
+2. Select **+Create a resource** and then search for **Template Deployment**.
+
+    ![In the Azure Portal New blade, Template Deployment is in the Search field.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image27.png "Azure Portal, New blade")
 
 3. Search for **Template** and select **Template Deployment (deploy using custom templates)**.
 
@@ -139,93 +221,15 @@ In this exercise, you will use Azure ARM templates to deploy the following envir
 
     ![In the Edit template page menu, Load file is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image30.png "Edit template blade")
 
-7. From the `C:\HOL\Deployments` directory, locate the **BCDRIaaSPrimarySite.json** file and select **Open**.
+7. From the `C:\HOL\Deployments` directory locate the **BCDRPaaSPrimarySite.json** file and select **Open**.
 
 8. This will load the template into the Azure portal. Select **Save**.
 
-    ![Screenshot of the Save button.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image31.png "Save button")
-
-9. On the **Custom deployment** blade, select your **BCDRIaaSPrimarySite** resource group. Notice how the template picked the deployment region based on the location of your **BCDRIaaSPrimarySite** resource group. Make sure this is *your* **Primary** region.
-
-    ![In the Custom deployment blade, fields are populated based on the BCDRIaaSPrimarySite resource group. A call out highlights the Location field that is set to the Primary region value.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image32.png "Custom deployment blade")
-
-10. Next, update the **Domain Controller DNS Name** in the **Settings** area. This will be the DNS name for the Active Directory Domain controller that will be your jump box into the IaaS environment. The name will need to be lowercase and 3-24 characters consisting of letters & numbers and be unique to all of Azure. In the example, the DNS name `bcdrdc8675309` was used.
-
-    ![In the Settings section, the Domain Controller DNS Name field is populated.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image33.png "Settings section")
-
-11. Finally, select **Purchase** to start the deployment.
-
-    ![The Purchase button is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image34.png "Purchase button")
-
-> **Note:** This deployment will take at least 60 minutes, but you can continue to the next task.
-
-### Task 2: Deploy on-premises environment
-
-1. From the **LABVM**, open Internet Explorer and connect to the Azure portal at: <https://portal.azure.com>.
-
-2. Select **+Create a resource** and then search for **Template Deployment**.
-
-    ![In the Azure portal New blade, Template Deployment is in the search field.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image27.png "Azure portal, New blade")
-
-3. Select **Template deployment** and then **Create**.
-
-    ![Template deployment is selected in the search results.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image28.png "Resource search results")
-
-4. On the **Template deployment** blade, select **Build your own template in the editor**.
-
-    ![The Build your own template in the editor link is selected in the Template deployment blade.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image29.png "Template deployment blade")
-
-5. On the **Edit template** blade, select **Load file**.
-
-    ![In the Edit template blade top menu, Load file is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image30.png "Edit template blade")
-
-6. From the `C:\HOL\Deployments` directory locate the **BCDROnPremPrimarySite.json** file and select **Open**.
-
-7. This will load the template into the Azure portal. Select **Save**.
-
-8. On the **Custom deployment** blade, next to **Resource group** select your **BCDROnPremPrimarySite** resource group. Notice how the template picked the deployment region based on the location of your **BCDROnPremPrimarySite** resource group. Make sure this is *your* **Primary** region.
-
-    ![In the Custom deployment blade, Basics section, fields are set to values based on your primary region.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image35.png "Custom deployment blade, Basics section")
-
-9. Next, update the **Hyper-V Host DNS Name** in the **Settings** area. This will be the DNS name for the Hyper-V Host that you will use for this simulated on-premises environment. The name will need to be lowercase and 3-24 characters consisting of letters & numbers and be unique to all of Azure. In the example, the name `hypervhost8675309` was used.
-
-    ![In the Settings section, the Domain Controller DNS Name field is populated.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image36.png "Settings section")
-
-10. Finally, check **I agree to the terms and conditions stated above** and **Pin to dashboard**. Select **Purchase** to start the deployment.
-
-    ![The check boxes for pin to dashboard and I agree to the terms and conditions are checked. The Purchase button is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image34.png "Purchase button")
-
-> **Note:** This deployment will take at least 20 minutes, but you can continue to the next task.
-
-### Task 3: Deploy Azure PaaS environment
-
-1. From the **LABVM**, open Internet Explorer and connect to the Azure portal at <https://portal.azure.com>.
-
-2. Select **+Create a resource** and then search for **Template Deployment**.
-
-    ![In the Azure Portal New blade, Template Deployment is in the Search field.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image27.png "Azure Portal, New blade")
-
-3. Select **Template deployment** and then **Create**.
-
-    ![Template deployment is selected in the search results.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image28.png "Resources search results")
-
-4. On the **Custom deployment blade**, select **Build your own template in the editor**.
-
-    ![In the Custom deployment blade, the Build your own template in the editor link is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image29.png "Custom deployment blade")
-
-5. On the **Edit template** blade, select **Load file**.
-
-    ![In the Edit template blade top menu, Load file is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image30.png "Edit template blade")
-
-6. From the `C:\HOL\Deployments` directory locate the **BCDRPaaSPrimarySite.json** file and select **Open**.
-
-7. This will load the template into the Azure portal. Select **Save**.
-
-8. On the **Custom deployment** blade, next to **Resource group** select your **BCDRPaaSPrimarySite** resource group. Notice how the template picked the deployment region based on the location of your **BCDRPaaSPrimarySite** resource group. Make sure this is *your* **Primary** region.
+9.  On the **Custom deployment** blade, next to **Resource group** select your **BCDRPaaSPrimarySite** resource group. Notice how the template picked the deployment region based on the location of your **BCDRPaaSPrimarySite** resource group. Make sure this is *your* **Primary** region.
 
     ![On the Custom deployment blade in the Basics section, fields are set to values matching the primary resource group.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image37.png "Custom deployment blade")
 
-9. Finally, select the **I agree to the terms and conditions stated above** and **Pin to dashboard.** Select **Purchase** to start the deployment.
+10. Finally, select the **I agree to the terms and conditions stated above** and **Pin to dashboard.** Select **Purchase** to start the deployment.
 
     ![The check boxes for pin to dashboard and I agree to the terms and conditions are checked. The Purchase button is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image34.png "Purchase button")
 
