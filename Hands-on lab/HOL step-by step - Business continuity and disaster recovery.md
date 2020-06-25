@@ -145,7 +145,7 @@ In this exercise, you will use Azure ARM templates to deploy the following envir
 
     ![Screenshot of the Save button.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image31.png "Save button")
 
-9.  On the **Custom deployment** blade, select your **BCDRIaaSPrimarySite** resource group. Notice how the template picked the deployment region based on the location of your **BCDRIaaSPrimarySite** resource group. Make sure this is *your* **Primary** region.
+9. On the **Custom deployment** blade, select your **BCDRIaaSPrimarySite** resource group. Notice how the template picked the deployment region based on the location of your **BCDRIaaSPrimarySite** resource group. Make sure this is *your* **Primary** region.
 
     ![In the Custom deployment blade, fields are populated based on the BCDRIaaSPrimarySite resource group. A call out highlights the Location field that is set to the Primary region value.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image32.png "Custom deployment blade")
 
@@ -153,9 +153,9 @@ In this exercise, you will use Azure ARM templates to deploy the following envir
 
     ![In the Settings section, the Domain Controller DNS Name field is populated.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image33.png "Settings section")
 
-11. Finally, select **I agree to the terms and conditions stated above** and **Pin to dashboard.** Select **Purchase** to start the deployment.
+11. Finally, select **Purchase** to start the deployment.
 
-    ![The check boxes for pin to dashboard and I agree to the terms and conditions are checked. The Purchase button is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image34.png "Purchase button")
+    ![The Purchase button is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image34.png "Purchase button")
 
 > **Note:** This deployment will take at least 60 minutes, but you can continue to the next task.
 
