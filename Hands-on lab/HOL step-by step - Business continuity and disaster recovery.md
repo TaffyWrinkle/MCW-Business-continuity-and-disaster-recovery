@@ -203,35 +203,31 @@ In this exercise, you will use Azure ARM templates to deploy the following envir
 
 2. Select **+Create a resource** and then search for **Template Deployment**.
 
-    ![In the Azure Portal New blade, Template Deployment is in the Search field.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image27.png "Azure Portal, New blade")
+    ![Create a resource is selected from the Azure Portal Home.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image26.png "Azure Portal New page")
 
-3. Search for **Template** and select **Template Deployment (deploy using custom templates)**.
-
-    ![Template is typed in the New search field.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image27.png "Azure Portal New blade")
-
-4. Select **Create**.
+3. Select **Template deployment** and then **Create**.
 
     ![Template deployment is selected in the search results.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image28.png "Resource search results")
 
-5. On the **Custom deployment** page, select **Build your own template in the editor**.
+4. On the **Template deployment** page, select **Build your own template in the editor**.
 
-    ![In the Custom deployment page, the link to build your own template in the editor is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image29.png "Custom deployment blade")
+    ![The Build your own template in the editor link is selected in the Template deployment page.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image29.png "Template deployment page")
 
-6. On the **Edit template** page, select **Load file**.
+5. On the **Edit template** page, select **Load file**.
 
-    ![In the Edit template page menu, Load file is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image30.png "Edit template blade")
+    ![In the Edit template page top menu, Load file is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image30.png "Edit template page")
 
-7. From the `C:\HOL\Deployments` directory locate the **BCDRPaaSPrimarySite.json** file and select **Open**.
+6. From the `C:\HOL\Deployments` directory locate the **BCDRPaaSPrimarySite.json** file and select **Open**.
 
-8. This will load the template into the Azure portal. Select **Save**.
+7. This will load the template into the Azure portal. Select **Save**.
 
-9.  On the **Custom deployment** blade, next to **Resource group** select your **BCDRPaaSPrimarySite** resource group. Notice how the template picked the deployment region based on the location of your **BCDRPaaSPrimarySite** resource group. Make sure this is *your* **Primary** region.
+8. On the **Custom deployment** page, next to **Resource group** select your **BCDRPaaSPrimarySite** resource group. Notice how the template picked the deployment region based on the location of your **BCDRPaaSPrimarySite** resource group. Make sure this is *your* **Primary** region.
 
-    ![On the Custom deployment blade in the Basics section, fields are set to values matching the primary resource group.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image37.png "Custom deployment blade")
+    ![On the Custom deployment page in the Basics section, fields are set to values matching the primary resource group.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image37.png "Custom deployment page")
 
-10. Finally, select the **I agree to the terms and conditions stated above** and **Pin to dashboard.** Select **Purchase** to start the deployment.
+9. Finally, select the **I agree to the terms and conditions stated above**. Select **Purchase** to start the deployment.
 
-    ![The check boxes for pin to dashboard and I agree to the terms and conditions are checked. The Purchase button is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image34.png "Purchase button")
+    ![The check box I agree to the terms and conditions are checked. The Purchase button is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image34.png "Purchase button")
 
 > **Note:** This deployment will take at least 10 minutes, but you can continue to the next task.
 
