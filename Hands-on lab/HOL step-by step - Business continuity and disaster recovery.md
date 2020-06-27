@@ -675,7 +675,7 @@ In this task, the **OnPremVM** will be configured to replicate to Azure and be r
 
     ![Fields in the Source blade are set to the previously defined values.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image125.png "Source blade")
 
-57. Complete the Target blade, select the following values:
+57. Complete the Target blade, select the following values and select **OK**:
 
     - **Post-failover resource group**: BCDRIaaSSecondarySite
     - **Storage Account**: Select the account you just created (**onpremvm8675309**).
