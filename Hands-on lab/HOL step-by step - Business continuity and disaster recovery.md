@@ -1095,7 +1095,7 @@ In this task, you will build a Windows Failover Cluster and configure SQL Always
 
 76. Select the **plus** button on the **Backend pools** box to begin adding endpoints to the backend pool.
 
-    ![The Configuration tab is shown with the Add backend pools plus button highlighted.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/213-c.png "The Configuration tab is shown with the Add backend pools button highlighted.")
+    ![The Configuration tab is shown with the Add backend pools plus button highlighted.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image213-c.png "The Configuration tab is shown with the Add backend pools button highlighted.")
 
 77. On the **Add a backend pool** pane, enter the following value, then select the **Add a backend** link.
 
