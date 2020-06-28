@@ -766,11 +766,10 @@ In this task, you will build a Windows Failover Cluster and configure SQL Always
 
     - **Resource group**: Use existing / BCDRAzureSiteRecovery.
     - **Storage account name:** Unique name starting with `bcdrcloudwitness`
-    - **Deployment model**: Resource manager
-    - **Account kind**: Storage (general purpose v2)
-    - **Performance**: Standard
-    - **Replication**: Locally-redundant storage (LRS)
     - **Location**: Any location in your area that is **NOT** your Primary or Secondary site.
+    - **Performance**: Standard
+    - **Account kind**: Storage (general purpose v2)
+    - **Replication**: Locally-redundant storage (LRS)
 
     ![Fields in the Create storage account blade are set to the previously defined settings.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image143.png "Create storage account blade")
 
@@ -807,7 +806,7 @@ In this task, you will build a Windows Failover Cluster and configure SQL Always
 
     ![Screenshot of the three file icons pasted to the desktop of the VM.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image151.png "Three file icons")
 
-13. On **SQLVM1**, select Start and then select **PowerShell ISE**.
+13. On **SQLVM1**, select Start and then select **PowerShell ISE** (make sure to right-click and Run as Administrator).
 
     ![Screenshot of the Windows PowerShell ISE icon.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image71.png "Windows PowerShell ISE icon")
 
